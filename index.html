@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meha Singal — Portfolio" />
+    <title>Meha Singal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <header>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav__monogram" href="#hero" aria-label="Meha Singal — home">ms</a>
+        <ul class="nav__links">
+          <li><a href="#work">work</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#research">research</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="container hero__content">
+          <h1 class="hero__headline">Meha <span class="hero__name-color">Singal</span></h1>
+          <p class="hero__tagline">Software Engineer&nbsp;•&nbsp;UW Data Science</p>
+          <div class="hero__cta">
+            <a href="#work" class="btn btn--work">See Work ↓</a>
+            <a href="assets/docs/mehasingal-resume.pdf" class="btn btn--resume" target="_blank" rel="noopener">Resume ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MoodRoom Project Showcase -->
+      <section id="work" class="showcase">
+        <div class="showcase__inner">
+
+          <!-- Left: iPhone video carousel -->
+          <div class="showcase__carousel-col">
+            <div class="iphone-frame" aria-hidden="true">
+              <div class="iphone-island"></div>
+              <div class="iphone-frame__screen">
+                <video class="showcase__video" id="showcase-video" muted playsinline></video>
+              </div>
+            </div>
+            <div class="carousel-dots" role="tablist" aria-label="Video navigation">
+              <button class="carousel-dot carousel-dot--active" data-index="0" role="tab" aria-selected="true"  aria-label="Play video 1"></button>
+              <button class="carousel-dot"                      data-index="1" role="tab" aria-selected="false" aria-label="Play video 2"></button>
+              <button class="carousel-dot"                      data-index="2" role="tab" aria-selected="false" aria-label="Play video 3"></button>
+              <button class="carousel-dot"                      data-index="3" role="tab" aria-selected="false" aria-label="Play video 4"></button>
+            </div>
+          </div>
+
+          <!-- Right: Project info -->
+          <div class="showcase__info">
+            <h2 class="showcase__title">MoodRoom</h2>
+            <p class="showcase__desc">MoodRoom is a cozy 3D room decoration game and DBT-aligned habit tracker designed to help young adult patients engage with behavioral and emotional regulation skills set by their therapists — making clinical goal-tracking feel less like a chore and more like play. As Lead Engineer and the sole developer on a cross-functional team of five, I joined the project after development had stalled and immediately got to work triaging bugs across multiple gameplay systems to revive the MVP. I translated Figma designs into fully functional in-engine UI and gameplay features using GDScript in the Godot engine, and redesigned the modular game architecture from the ground up to support a growing library of 3D assets and media. Within one month, I shipped a fully functional prototype to early testers via Apple TestFlight for clinical feedback.</p>
+            <ul class="showcase__tags">
+              <li>Godot</li>
+              <li>Figma</li>
+              <li>Xcode</li>
+              <li>Swift</li>
+              <li>GDScript</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TerraAntiqua Project Showcase -->
+      <section class="showcase showcase--alt showcase--terra">
+        <div class="showcase__inner">
+
+          <!-- Left: Project info -->
+          <div class="showcase__info">
+            <h2 class="showcase__title">TerraAntiqua</h2>
+            <p class="showcase__desc">TerraAntiqua grew out of a frustration with history textbooks that felt strikingly Eurocentric, where civilizations were taught as isolated stories rather than chapters in a shared global timeline. The app reimagines history as a living, interconnected map you can explore, letting users travel through ancient civilizations anchored to real geography and a scrollable timeline. Built with React and the Google Maps API, TerraAntiqua was developed as a fully AI-native app using Claude Code, accelerating development across the full stack. One of the most meaningful parts of the project was manually reconstructing fragmented historical data into clean GeoJSON datasets — work I've contributed back to the open source community for other developers and mapmakers to use.</p>
+            <ul class="showcase__tags">
+              <li>React</li>
+              <li>Google Maps API</li>
+              <li>GeoJSON</li>
+              <li>Claude Code</li>
+            </ul>
+            <div class="showcase__links">
+              <a href="https://terra-antiqua.ideaforge.work/home" class="btn btn--lavender" target="_blank" rel="noopener">Demo ↗</a>
+            </div>
+          </div>
+
+          <!-- Right: Browser frame with live iframe -->
+          <div class="browser-frame">
+            <div class="browser-chrome">
+              <div class="browser-dots" aria-hidden="true">
+                <span class="browser-dot browser-dot--red"></span>
+                <span class="browser-dot browser-dot--yellow"></span>
+                <span class="browser-dot browser-dot--green"></span>
+              </div>
+              <div class="browser-url" aria-hidden="true">terra-antiqua.ideaforge.work</div>
+              <div class="browser-chrome__spacer" aria-hidden="true"></div>
+            </div>
+            <div class="browser-viewport">
+              <iframe
+                id="terra-iframe"
+                class="browser-iframe"
+                src="https://terra-antiqua.ideaforge.work/home"
+                title="TerraAntiqua live demo"
+                loading="lazy"
+              ></iframe>
+              <div class="browser-fallback" id="terra-fallback" hidden>
+                <img src="assets/images/terra-antiqua-screenshot.png" alt="TerraAntiqua screenshot" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Snohomish County Project Showcase -->
+      <section class="showcase showcase--snoho">
+        <div class="showcase__inner">
+
+          <!-- Full-width title above columns -->
+          <h2 class="showcase__title showcase__title--snoho">Snohomish County Disaster Relief Platform</h2>
+
+          <!-- Left: Photo carousel -->
+          <div class="showcase__carousel-col">
+            <div class="photo-carousel photo-carousel--snoho" id="snohomish-carousel">
+              <div class="photo-carousel__track">
+
+                <div class="photo-carousel__slide photo-carousel__slide--active">
+                  <img src="assets/img/snoho/snoho-1.png" alt="Snohomish County Disaster Relief Platform — screenshot 1" class="photo-carousel__img">
+                </div>
+
+                <div class="photo-carousel__slide">
+                  <img src="assets/img/snoho/snoho-2.png" alt="Snohomish County Disaster Relief Platform — screenshot 2" class="photo-carousel__img">
+                </div>
+
+              </div>
+              <button class="photo-carousel__btn photo-carousel__btn--prev" aria-label="Previous image">&#8249;</button>
+              <button class="photo-carousel__btn photo-carousel__btn--next" aria-label="Next image">&#8250;</button>
+            </div>
+            <div class="photo-carousel__dots" id="snohomish-dots" role="tablist" aria-label="Image navigation">
+              <button class="photo-dot photo-dot--active" data-index="0" role="tab" aria-selected="true"  aria-label="View image 1"></button>
+              <button class="photo-dot"                   data-index="1" role="tab" aria-selected="false" aria-label="View image 2"></button>
+            </div>
+          </div>
+
+          <!-- Right: Project info -->
+          <div class="showcase__info">
+            <p class="showcase__desc">Built for a senior capstone course with a real client — the Snohomish County Department of Emergency Management — this FEMA-compliant Survey123 application integrated with ArcGIS Enterprise and Tableau dashboards gives emergency staff real-time visibility into disaster impact across a region of 800,000+ residents. As technical lead of a three-person team, I built the Excel automation and logic powering the survey's FEMA compliance structure. The platform was officially adopted by the department and remains in active use today for field data collection during Western Washington climate disasters.</p>
+            <ul class="showcase__tags">
+              <li>ArcGIS</li>
+              <li>Survey123</li>
+              <li>Tableau</li>
+              <li>Excel</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- UW Alert Mapping System Project Showcase -->
+      <section class="showcase showcase--alt showcase--uwmap">
+        <div class="showcase__inner">
+
+          <!-- Full-width title above columns -->
+          <h2 class="showcase__title showcase__title--uwmap">UW Alert Mapping System</h2>
+
+          <!-- Left: Project info -->
+          <div class="showcase__info">
+            <p class="showcase__desc">The UW Alert Mapping System started as a class project and evolved into a working prototype pitched to the UW Alert Director as a potential tool for improving campus safety communication for students. The platform processes live 911 call data from open-source APIs, visualizing incidents as map pins with surrounding buffer zones that flag high-risk areas, and providing turn-by-turn safe route navigation around them. As technical and full-stack lead of a five-person team, I handled all API integration and backend data pipelines, with the geospatial analysis powered by Turf.js and Mapbox on the frontend and Python and pandas on the backend. The platform is currently live as a desktop web app, with an iOS Swift extension in active development.</p>
+            <ul class="showcase__tags">
+              <li>Python</li>
+              <li>Mapbox</li>
+              <li>Turf.js</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="showcase__links">
+              <a href="https://github.com/mehasingal/uw-alert-app" class="btn btn--lavender" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://vm11962-2131012.github.io/UW_Alert_System/index.html" class="btn btn--lavender" target="_blank" rel="noopener">Demo ↗</a>
+            </div>
+          </div>
+
+          <!-- Right: Browser frame with live iframe -->
+          <div class="browser-frame">
+            <div class="browser-chrome">
+              <div class="browser-dots" aria-hidden="true">
+                <span class="browser-dot browser-dot--red"></span>
+                <span class="browser-dot browser-dot--yellow"></span>
+                <span class="browser-dot browser-dot--green"></span>
+              </div>
+              <div class="browser-url" aria-hidden="true">vm11962-2131012.github.io</div>
+              <div class="browser-chrome__spacer" aria-hidden="true"></div>
+            </div>
+            <div class="browser-viewport" style="--iframe-natural-w: 1440px; --iframe-scale: 0.4375;">
+              <iframe
+                class="browser-iframe"
+                src="https://vm11962-2131012.github.io/UW_Alert_System/index.html"
+                title="UW Alert Mapping System demo"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Parsing the English Catalogue Research Showcase -->
+      <section id="research" class="showcase showcase--media-wide">
+        <div class="showcase__inner">
+
+          <!-- Left: Photo carousel with title above -->
+          <div class="showcase__carousel-col">
+            <h2 class="showcase__title showcase__title--research">Parsing the English Catalogue</h2>
+            <div class="photo-carousel photo-carousel--lg" id="research-carousel">
+              <div class="photo-carousel__track">
+
+                <div class="photo-carousel__slide photo-carousel__slide--active">
+                  <span class="photo-carousel__placeholder-text" aria-hidden="true">research-1.jpg</span>
+                  <img src="assets/img/research/research-1.jpg" alt="Parsing the English Catalogue — image 1" class="photo-carousel__img" onerror="this.style.display='none'">
+                </div>
+
+                <div class="photo-carousel__slide">
+                  <span class="photo-carousel__placeholder-text" aria-hidden="true">research-2.jpg</span>
+                  <img src="assets/img/research/research-2.jpg" alt="Parsing the English Catalogue — image 2" class="photo-carousel__img" onerror="this.style.display='none'">
+                </div>
+
+                <div class="photo-carousel__slide">
+                  <span class="photo-carousel__placeholder-text" aria-hidden="true">research-3.jpg</span>
+                  <img src="assets/img/research/research-3.jpg" alt="Parsing the English Catalogue — image 3" class="photo-carousel__img" onerror="this.style.display='none'">
+                </div>
+
+              </div>
+              <button class="photo-carousel__btn photo-carousel__btn--prev" aria-label="Previous image">&#8249;</button>
+              <button class="photo-carousel__btn photo-carousel__btn--next" aria-label="Next image">&#8250;</button>
+            </div>
+            <div class="photo-carousel__dots" id="research-dots" role="tablist" aria-label="Image navigation">
+              <button class="photo-dot photo-dot--active" data-index="0" role="tab" aria-selected="true"  aria-label="View image 1"></button>
+              <button class="photo-dot"                   data-index="1" role="tab" aria-selected="false" aria-label="View image 2"></button>
+              <button class="photo-dot"                   data-index="2" role="tab" aria-selected="false" aria-label="View image 3"></button>
+            </div>
+          </div>
+
+          <!-- Right: Project info -->
+          <div class="showcase__info">
+            <p class="showcase__desc">As one of 16 undergraduate research fellows at the UW eScience Institute, I built automated Python text-parsing pipelines using regular expressions to process a 160,000-record bibliographic dataset of early 20th-century British publishing records digitized by HathiTrust. A core part of the work involved inspecting and tinkering with the underlying OCR machine learning algorithms — identifying where the model consistently failed and adjusting extraction logic to compensate — improving data coverage by 15% and achieving 98% extraction accuracy. I also designed a normalized SQL schema to store and query the processed records, increasing analysis speed by 20%.</p>
+            <ul class="showcase__tags">
+              <li>Python</li>
+              <li>Regex</li>
+              <li>SQL</li>
+              <li>OCR</li>
+            </ul>
+            <p class="showcase__featured-label">Featured in</p>
+            <div class="showcase__links">
+              <a href="https://www.dailyuw.com/article/2b039505-ed38-413e-9c0f-12e84b8f4db1" class="btn btn--white" target="_blank" rel="noopener">The Daily UW ↗</a>
+              <a href="https://escience.washington.edu/looking-back-on-the-summer-2024-humanities-data-science-summer-institute-hdssi/" class="btn btn--white" target="_blank" rel="noopener">UW eScience ↗</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Skills -->
+
+      <!-- About -->
+      <section id="about" class="section about">
+        <div class="container about__inner">
+          <div class="about__text">
+            <h2 class="section__title">About</h2>
+            <p>Seattle-raised, Chicago-based software engineer and UW Data Science grad. I love building for early-stage startups — environments where the problems are undefined, the stack is new, and the work ships fast. I'm at a stage in my career where I'm hungry to learn, contribute, and grow alongside a team building something meaningful. Outside of work, you'll find me on a long walk with a true crime podcast, or swimming in any natural body of water during summers!</p>
+          </div>
+          <div class="about__image">
+            <img src="assets/img/personal/me-about-pic.jpg" alt="Meha Singal" class="about__photo">
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section skills">
+        <div class="container">
+          <h2 class="section__title skills__heading">Skills</h2>
+          <div class="skills__layout">
+
+            <!-- Left: 2×2 skill category grid -->
+            <div class="skills__groups">
+
+              <div class="skill-group">
+                <p class="skill-group__label">Languages</p>
+                <ul class="skill-group__chips">
+                  <li class="skill-chip">Python</li>
+                  <li class="skill-chip">JavaScript</li>
+                  <li class="skill-chip">SQL</li>
+                  <li class="skill-chip">R</li>
+                </ul>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group__label">Frameworks &amp; Libraries</p>
+                <ul class="skill-group__chips">
+                  <li class="skill-chip">React</li>
+                  <li class="skill-chip">Pandas</li>
+                  <li class="skill-chip">NumPy</li>
+                  <li class="skill-chip">Scikit-learn</li>
+                  <li class="skill-chip">Node.js</li>
+                </ul>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group__label">GIS &amp; Mapping</p>
+                <ul class="skill-group__chips">
+                  <li class="skill-chip">ArcGIS</li>
+                  <li class="skill-chip">Mapbox</li>
+                  <li class="skill-chip">Turf.js</li>
+                  <li class="skill-chip">GeoJSON</li>
+                </ul>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group__label">Tools &amp; Cloud</p>
+                <ul class="skill-group__chips">
+                  <li class="skill-chip">Git</li>
+                  <li class="skill-chip">Tableau</li>
+                  <li class="skill-chip">Figma</li>
+                  <li class="skill-chip">Godot</li>
+                  <li class="skill-chip">AWS</li>
+                  <li class="skill-chip">Excel</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Right: AWS certification badge -->
+            <div class="skills__cert">
+              <img src="assets/img/personal/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner badge" class="skills__cert-img">
+              <p class="skills__cert-label">AWS Certified Cloud Practitioner · June 2026</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section education">
+        <div class="container">
+          <h2 class="section__title education__heading">Education</h2>
+
+          <!-- Main card -->
+          <div class="edu-card">
+            <div class="edu-card__inner">
+              <img src="assets/img/personal/uw-logo.png" alt="University of Washington" class="edu-card__logo">
+              <div class="edu-card__details">
+                <h3 class="edu-card__university">University of Washington</h3>
+                <p class="edu-card__degree">B.A. in Geospatial Data Science · Minor in Informatics</p>
+                <p class="edu-card__meta">GPA 3.8/4.0 · June 2025</p>
+                <ul class="edu-card__honors">
+                  <li class="skill-chip">Dean's List — 8 Quarters</li>
+                  <li class="skill-chip">Humanities Data Science Institute Fellow 2024</li>
+                </ul>
+                <p class="edu-card__coursework">Algorithms &amp; Data Structures · Machine Learning · Database Systems · Full Stack Development</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research affiliations -->
+          <div class="edu-affiliations">
+            <p class="edu-affiliations__label">Research Affiliations</p>
+            <div class="edu-affiliations__logos">
+              <img src="assets/img/personal/escience-logo.png" alt="UW eScience Institute" class="edu-affiliations__logo">
+              <img src="assets/img/personal/humanities-data-lab.png" alt="Humanities Data Lab" class="edu-affiliations__logo">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="container contact__inner">
+          <h2 class="section__title">Contact</h2>
+          <p class="contact__email">meha.singal@gmail.com</p>
+          <div class="contact__links">
+            <a href="https://github.com/mehasingal" class="btn btn--lavender" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/meha-singal12" class="btn btn--lavender" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Meha Singal</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
